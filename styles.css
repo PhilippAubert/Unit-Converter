@@ -1,0 +1,61 @@
+body, ul, li {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    list-style-position: unset;
+}
+
+a {
+    text-decoration:none;
+}
+
+h1 {
+    margin-block: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.headline {
+    padding:0 8px;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    background-color: #f0f;
+}
+
+.navigation {
+    padding: 0 8px;
+    background-color: #f0f;
+}
+
+
+.list-container {
+    padding: 0;
+    margin: 0;
+    display:flex;
+    justify-content: space-between;
+}
+
+.list-item {
+    padding: 8px;
+}
+
+.list-item-text {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+}
+
+/*
+    all 
+        fontsizes 
+        paddings
+    
+    for mobile! 
+
+*/

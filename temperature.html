@@ -30,31 +30,35 @@
         </nav>
     </header>
     <main>
+    <!-- 
+        TODO: 
+            Add FORM!!! 
+            CHECK THE SKETCH!
+            ADD ALL ELEMENTS 
+            SERVE BY INDEX.JS
+
+
+            Celsius,
+            Fahrenheit, 
+            Kelvin
+    -->
     <section>
         <form id="converterForm" method="get">
-            <label for="length">Enter length:</label>
-            <input type="text" id="length" name="length" required>
-            <label for="length_from">Unit to convert from:</label>
-            <select id="length_from" name="from" required>
+            <label for="temperature">Enter temperature:</label>
+            <input type="text" id="temperature" name="temperature" required>
+            <label for="temperature_from">Unit to convert from:</label>
+            <select id="temperature_from" name="from" required>
                 <option value="">--Please choose an option--</option>
-                <option value="millimeter">Millimeter</option>
-                <option value="centimeter">Centimeter</option>
-                <option value="kilometer">Kilometer</option>
-                <option value="inch">Inch</option>
-                <option value="foot">Foot</option>
-                <option value="yard">Yard</option>
-                <option value="mile">Mile</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
             </select>
-            <label for="length_to">Unit to convert to:</label>
-            <select id="length_to" name="to" required>
+            <label for="temperature_to">Unit to convert to:</label>
+            <select id="temperature_to" name="to" required>
                 <option value="">--Please choose an option--</option>
-                <option value="millimeter">Millimeter</option>
-                <option value="centimeter">Centimeter</option>
-                <option value="kilometer">Kilometer</option>
-                <option value="inch">Inch</option>
-                <option value="foot">Foot</option>
-                <option value="yard">Yard</option>
-                <option value="mile">Mile</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
             </select>
             <button type="submit">Convert</button>
         </form>
