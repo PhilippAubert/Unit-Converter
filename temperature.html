@@ -7,65 +7,69 @@
     <title>Unit Converter</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="headline">Unit Converter</h1>
-        <nav class="navigation">
-            <ul class="list-container">
-                <li class="list-item">
-                    <a href="/index.html">
-                        <p class="list-item-text">Length</p>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a href="/weight.html">
-                        <p class="list-item-text">Weight</p>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a href="/temperature.html">
-                        <p class="list-item-text">Temperature</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-    <!-- 
-        TODO: 
-            Add FORM!!! 
-            CHECK THE SKETCH!
-            ADD ALL ELEMENTS 
-            SERVE BY INDEX.JS
-
-
-            Celsius,
-            Fahrenheit, 
-            Kelvin
-    -->
-    <section>
-        <form id="converterForm" method="get">
-            <label for="temperature">Enter temperature:</label>
-            <input type="text" id="temperature" name="temperature" required>
-            <label for="temperature_from">Unit to convert from:</label>
-            <select id="temperature_from" name="from" required>
-                <option value="">--Please choose an option--</option>
-                <option value="kelvin">Kelvin</option>
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
-            </select>
-            <label for="temperature_to">Unit to convert to:</label>
-            <select id="temperature_to" name="to" required>
-                <option value="">--Please choose an option--</option>
-                <option value="kelvin">Kelvin</option>
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
-            </select>
-            <button type="submit">Convert</button>
-        </form>
-    </section>
-    </main>
-    <footer>
-        <p>Unit Converter 2025</p>
-    </footer>
+    <div class="global-app">
+        <header class="header">
+            <h1 class="headline">Unit Converter</h1>
+            <nav class="navigation">
+                <ul class="list-container">
+                    <li class="list-item">
+                        <a href="/index.html">
+                            <p class="list-item-text">Length</p>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/weight.html">
+                            <p class="list-item-text">Weight</p>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/temperature.html">
+                            <p class="list-item-text">Temperature</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+        <section class="form-container">
+            <form class="form" id="converterForm" method="get">
+                <div class="form-section">
+                    <label class="form-label" for="temperature">Enter temperature:</label>
+                    <div class="input-area">
+                        <input type="number" id="temperature" name="temperature" required>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label class="form-label" for="temperature_from">Unit to convert from:</label>
+                    <div class="select-wrapper">
+                        <select id="temperature_from" name="from" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label class="form-label" for="temperature_to">Unit to convert to:</label>
+                    <div class="select-wrapper">
+                        <select id="temperature_to" name="to" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-area">
+                    <button type="submit">Convert</button>
+                </div>
+            </form>
+        </section>
+        </main>
+        <footer class="footer">
+            <p class="footer-text">Unit Converter 2025</p>
+        </footer>
+    </div>
 </body>
 </html>

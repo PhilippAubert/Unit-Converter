@@ -1,9 +1,14 @@
 //TODO: 
 
+
+
 /***
  * run express server
  * local_host?! 
  * ENDPOINTS: 
+ * 
+ * 
+ * 
  *              GET/length => form: length! 
  *              POST/(ONCLICK!) => body: {
  *                      value: number,
@@ -22,44 +27,44 @@
  *              GET/temperature => form: length! 
  *              POST/
  * 
- *                        ┌───────────────────────────────┐
-                       │       Browser Request          │
+ *                     ┌───────────────────────────────┐
+                       │       Browser Request         │
                        │  GET /length (or reset)       │
                        └─────────────┬─────────────────┘
                                      │
                                      ▼
                        ┌───────────────────────────────┐
-                       │       Server Receives GET      │
-                       │  - Decides Form State          │
-                       │  - Returns HTML with:          │
-                       │    • Form visible      │
-                       │    • Result hidden     │
+                       │       Server Receives GET     │
+                       │  - Decides Form State         │
+                       │  - Returns HTML with:         │
+                       │    • Form visible             │
+                       │    • Result hidden            │
                        └─────────────┬─────────────────┘
                                      │
                                      ▼
-                       ┌───────────────────────────────┐
+                       ┌─────────────────────────────── ┐
                        │       Browser Renders Page     │
                        │  - User sees empty form        │
                        │  - Header / nav / footer static│
-                       └─────────────┬─────────────────┘
+                       └─────────────┬───────────────── ┘
                                      │
                  User fills form and clicks Convert
                                      │
                                      ▼
                        ┌───────────────────────────────┐
-                       │       Form Submitted POST      │
+                       │       Form Submitted POST     │
                        │        target="_self"         │
                        └─────────────┬─────────────────┘
                                      │
                                      ▼
                        ┌───────────────────────────────┐
-                       │       Server Receives POST     │
+                       │       Server Receives POST    │
                        │  - Reads input value & units  │
                        │  - Performs conversion        │
                        │  - Decides Result State       │
                        │  - Returns HTML with:         │
-                       │    • Result populated │
-                       │    • Form cleared     │
+                       │    • Result populated         │
+                       │    • Form cleared             │
                        │    • Reset button visible     │
                        └─────────────┬─────────────────┘
                                      │
