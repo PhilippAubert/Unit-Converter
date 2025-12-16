@@ -19,6 +19,7 @@ a {
 h1 {
     margin-block: 0;
 }
+
 .global-app {
     background-color: #0ff;
     display: flex;
@@ -29,6 +30,7 @@ h1 {
 header {
     display: flex;
     flex-direction: column;
+    gap: 24px;
     padding: 24px;
 }
 
@@ -40,9 +42,9 @@ header {
     display: flex;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 48px;
-    padding: 0 12px;
+    font-size: 3em;
     background-color: #0ff;
+    padding: 4px 12px;
 }
 
 .navigation {
@@ -54,18 +56,23 @@ header {
 
 
 .list-container {
-    padding: 28px 0px 14px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #0ff;
+    padding: 4px 12px;
+
 }
 
 .list-item {
     padding: 8px 0;
-
 }
 
 .list-item-text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 1.4em;
     color: #000;
 }
 
@@ -86,7 +93,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 12px;
+    gap: 44px;
     height: 100%;
 }
 
@@ -100,6 +107,7 @@ header {
 
 .form-label {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
 input {
@@ -129,7 +137,7 @@ select {
     background-color: rgb(255, 255, 255);
     border: 1px solid #000;
     border-radius: 5px;
-    font-size: 32px;
+    font-size: 23px;
     width: 100%;
 }
 
@@ -141,13 +149,14 @@ select {
     box-sizing: border-box;
 }
 
+option {
+    font-size: 50%;
+}
+
 .select-wrapper::after {
     right: 0;
     position: absolute;
 }
-
-
-
 
 .button-area {
     border-radius: 5px;
@@ -182,7 +191,73 @@ footer {
 .footer-text {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000;
-    font-size: 52px;
     font-weight: 800;
     padding: 24px;
+}
+
+@media (min-width: 997px) {
+    .headline {
+        font-size: 6em;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .list-container {
+        padding: 0 16px;
+        gap: 4px;
+        justify-content: flex-start;
+    }
+
+    .form {
+        padding: 32px 64px;
+        width: fit-content;
+    }
+
+    .footer-text {
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 359px) {
+    .headline {
+        font-size: 2.8em;
+    }
+
+    .list-container {
+        font-size: 0.7em;
+    }
+
+
+    .main {
+        flex: 1;
+        font-size: 32px;
+        padding: 8px 24px;
+        flex-direction: column;
+    }
+
+    .form {
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .form-label {
+        font-weight: 800;
+    }
+
+
+
+    .footer {
+        padding: 0;
+    }
+
+    button {
+        padding: 4px 22px;
+    }
 }
