@@ -18,6 +18,9 @@
   "homepage": "https://github.com/PhilippAubert/Unit-Converter#readme",
   "description": "",
   "dependencies": {
-    "eslint": "^9.39.1"
-  }
+    "eslint": "^9.39.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  },
+  "type": "module"
 }
