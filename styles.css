@@ -7,6 +7,14 @@ p {
     padding: 0;
 }
 
+
+input,
+select,
+button {
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
 /* Firefox */
 input[type=number] {
     appearance: textfield;
@@ -42,7 +50,7 @@ header {
     display: flex;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
+    font-size: 4.5em;
     background-color: #0ff;
     padding: 4px 12px;
 }
@@ -72,7 +80,7 @@ header {
 .list-item-text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    font-size: 1.4em;
+    font-size: 1.7em;
     color: #000;
 }
 
@@ -143,7 +151,6 @@ select {
     font-size: 100%;
     width: 100%;
     background-color: #f0f;
-    padding: 8px;
 }
 
 option {
