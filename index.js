@@ -2,15 +2,16 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { convertWeight, 
-	convertLength, 
-	convertTemperature 
+import {
+    convertWeight,
+    convertLength,
+    convertTemperature
 } from "./utils/converter.js";
 
-import {pluralizeUnits, normalizeResult} from "./utils/normalizers.js";
+import { pluralizeUnits, normalizeResult } from "./utils/normalizers.js";
 
 import { validateRequest } from "./utils/validation.js";
-  
+
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,7 +20,6 @@ app.use("/", express.static(path.join(__dirname, "app")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.post("/", (req, res) => {
-
     const validatedInput = validateRequest(req.body);
 
     if (!validatedInput.valid) {
@@ -44,7 +44,7 @@ app.post("/", (req, res) => {
             return res.status(400).send("Unknown conversion type");
     }
 
-	res.send(`
+    res.send(`
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
@@ -86,9 +86,9 @@ app.post("/", (req, res) => {
 			</div>
 		</body>
 		</html>
-	`);	
+	`);
 });
 
 app.listen(3000, () => {
-  	console.log("Server running on http://localhost:3000");
+    console.log("Server running on http://localhost:3000");
 });

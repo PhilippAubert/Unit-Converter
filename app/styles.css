@@ -6,9 +6,7 @@ p {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-
 }
-
 
 input,
 select,
@@ -18,7 +16,7 @@ button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
     appearance: textfield;
 }
 
@@ -64,7 +62,6 @@ header {
     justify-content: space-between;
 }
 
-
 .list-container {
     width: 100%;
     display: flex;
@@ -72,7 +69,6 @@ header {
     justify-content: space-between;
     background-color: #0ff;
     padding: 4px 12px;
-
 }
 
 .list-item {
@@ -86,7 +82,6 @@ header {
     color: #000;
 }
 
-
 .main {
     flex: 1;
     font-size: 32px;
@@ -99,9 +94,9 @@ header {
     padding: 16px;
     gap: 16px;
     width: 100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-container {
@@ -125,7 +120,6 @@ header {
     gap: 4px;
 }
 
-
 .form-label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
@@ -147,12 +141,11 @@ input {
 }
 
 input:focus {
-    outline: none
+    outline: none;
 }
 
 .input-area {
     width: 100%;
-
 }
 
 select {
@@ -178,14 +171,10 @@ option {
     box-sizing: border-box;
 }
 
-
-
 .select-wrapper::after {
     right: 0;
     position: absolute;
 }
-
-
 
 button {
     box-sizing: border-box;
@@ -287,7 +276,6 @@ footer {
         font-size: 0.7em;
     }
 
-
     .main {
         flex: 1;
         font-size: 32px;
@@ -314,7 +302,6 @@ footer {
         font-weight: 800;
         font-size: 16px;
     }
-
 
     .footer {
         padding: 0;

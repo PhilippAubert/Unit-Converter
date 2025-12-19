@@ -1,28 +1,38 @@
 {
-  "name": "unit-converter",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PhilippAubert/Unit-Converter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PhilippAubert/Unit-Converter/issues"
-  },
-  "homepage": "https://github.com/PhilippAubert/Unit-Converter#readme",
-  "description": "",
-  "dependencies": {
-    "body-parser": "^2.2.1",
-    "cors": "^2.8.5",
-    "eslint": "^9.39.1",
-    "express": "^5.2.1",
-    "nodemon": "^3.1.11"
-  },
-  "type": "module"
+    "name": "unit-converter",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon index.js",
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --ext .js,.mjs,.cjs,.html",
+        "lint:fix": "eslint . --ext .js,.mjs,.cjs,.html --fix",
+        "format": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PhilippAubert/Unit-Converter.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PhilippAubert/Unit-Converter/issues"
+    },
+    "homepage": "https://github.com/PhilippAubert/Unit-Converter#readme",
+    "description": "",
+    "dependencies": {
+        "express": "^5.2.1",
+        "nodemon": "^3.1.11"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-html": "^8.1.3",
+        "globals": "^16.5.0",
+        "prettier": "^3.7.4"
+    }
 }

@@ -1,16 +1,16 @@
-export const pluralizeUnits = ({unit, value}) => {
+export const pluralizeUnits = ({ unit, value }) => {
     if (value === 1) return unit;
     if (unit === "foot") return value === 1 ? "foot" : "feet";
     if (unit === "inch") return value === 1 ? "inch" : "inches";
 
     return unit + "s";
-}
+};
 
 export const normalizeResult = (value) => {
     const absNum = Math.abs(value);
-    
+
     if (absNum === 0) return "0";
-    
+
     if (absNum < 0.001) {
         return Number(value).toExponential(3);
     } else if (absNum < 1) {
@@ -22,4 +22,4 @@ export const normalizeResult = (value) => {
     } else {
         return Number(value).toExponential(4);
     }
-}
+};

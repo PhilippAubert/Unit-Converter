@@ -23,4 +23,4 @@ export const validateRequest = (body) => {
     }
 
     return { valid: true, type, value, from, to };
-}
+};

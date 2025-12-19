@@ -1,113 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Unit Converter</title>
-</head>
-<body>
-    <div class="global-app">
-        <header class="header">
-            <h1 class="headline">Unit Converter</h1>
-            <nav class="navigation">
-                <ul class="list-container">
-                    <li class="list-item">
-                        <a href="/index.html">
-                            <p class="list-item-text">Length</p>
-                        </a>
-                    </li>
-                    <li class="list-item">
-                        <a href="/weight.html">
-                            <p class="list-item-text">Weight</p>
-                        </a>
-                    </li>
-                    <li class="list-item">
-                        <a href="/temperature.html">
-                            <p class="list-item-text">Temperature</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="main">
-            <form class="form" id="converterForm" method="post" action="/">
-                <div class="form-section">
-                    <label class="form-label" for="length">Enter length:</label>
-                    <div class="input-area">
-                        <input type="number" id="length" name="length" required>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Unit Converter</title>
+    </head>
+    <body>
+        <div class="global-app">
+            <header class="header">
+                <h1 class="headline">Unit Converter</h1>
+                <nav class="navigation">
+                    <ul class="list-container">
+                        <li class="list-item">
+                            <a href="/index.html">
+                                <p class="list-item-text">Length</p>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/weight.html">
+                                <p class="list-item-text">Weight</p>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/temperature.html">
+                                <p class="list-item-text">Temperature</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <form class="form" id="converterForm" method="post" action="/">
+                    <div class="form-section">
+                        <label class="form-label" for="length"
+                            >Enter length:</label
+                        >
+                        <div class="input-area">
+                            <input
+                                type="number"
+                                id="length"
+                                name="length"
+                                required
+                            />
+                        </div>
                     </div>
-                </div>
-                <div class="form-section">
-                    <label class="form-label" for="length_from">Unit to convert from:</label>
-                    <div class="select-wrapper">
-                        <select id="length_from" name="from" required>
-                            <option value="">
-                                <span>--Please choose an option--</span>
-                            </option>
-                            <option value="millimeter">
-                                <span>Millimeter</span>
-                            </option>
-                            <option value="centimeter">
-                                <span>Centimeter</span>
-                            </option>
-                            <option value="kilometer">
-                                <span>Kilometer</span>
-                            </option>
-                            <option value="inch">
-                                <span>Inch</span>
-                            </option>
-                            <option value="foot">
-                                <span>Foot</span>
-                            </option>
-                            <option value="yard">
-                                <span>Yard</span>
-                            </option>
-                            <option value="mile">
-                                <span>Mile</span>
-                            </option>
-                        </select>
+                    <div class="form-section">
+                        <label class="form-label" for="length_from"
+                            >Unit to convert from:</label
+                        >
+                        <div class="select-wrapper">
+                            <select id="length_from" name="from" required>
+                                <option value="">
+                                    <span>--Please choose an option--</span>
+                                </option>
+                                <option value="millimeter">
+                                    <span>Millimeter</span>
+                                </option>
+                                <option value="centimeter">
+                                    <span>Centimeter</span>
+                                </option>
+                                <option value="kilometer">
+                                    <span>Kilometer</span>
+                                </option>
+                                <option value="inch">
+                                    <span>Inch</span>
+                                </option>
+                                <option value="foot">
+                                    <span>Foot</span>
+                                </option>
+                                <option value="yard">
+                                    <span>Yard</span>
+                                </option>
+                                <option value="mile">
+                                    <span>Mile</span>
+                                </option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="form-section">
-                    <label class="form-label" for="length_to">Unit to convert to:</label>
-                    <div class="select-wrapper">
-                        <select id="length_to" name="to" required>    
-                        <option value="">
-                            <span>--Please choose an option--</span>
-                        </option>
-                        <option value="millimeter">
-                            <span>Millimeter</span>
-                        </option>
-                        <option value="centimeter">
-                            <span>Centimeter</span>
-                        </option>
-                        <option value="kilometer">
-                            <span>Kilometer</span>
-                        </option>
-                        <option value="inch">
-                            <span>Inch</span>
-                        </option>
-                        <option value="foot">
-                            <span>Foot</span>
-                        </option>
-                        <option value="yard">
-                            <span>Yard</span>
-                        </option>
-                        <option value="mile">
-                            <span>Mile</span>
-                        </option>
-                    </select>
+                    <div class="form-section">
+                        <label class="form-label" for="length_to"
+                            >Unit to convert to:</label
+                        >
+                        <div class="select-wrapper">
+                            <select id="length_to" name="to" required>
+                                <option value="">
+                                    <span>--Please choose an option--</span>
+                                </option>
+                                <option value="millimeter">
+                                    <span>Millimeter</span>
+                                </option>
+                                <option value="centimeter">
+                                    <span>Centimeter</span>
+                                </option>
+                                <option value="kilometer">
+                                    <span>Kilometer</span>
+                                </option>
+                                <option value="inch">
+                                    <span>Inch</span>
+                                </option>
+                                <option value="foot">
+                                    <span>Foot</span>
+                                </option>
+                                <option value="yard">
+                                    <span>Yard</span>
+                                </option>
+                                <option value="mile">
+                                    <span>Mile</span>
+                                </option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="button-area">
-                    <button type="submit">Convert</button>
-                </div>
-            </form>
-        </main>
-        <footer class="footer">
-            <p class="footer-text">Unit Converter 2025</p>
-        </footer>
-    </div>
-</body>
+                    <div class="button-area">
+                        <button type="submit">Convert</button>
+                    </div>
+                </form>
+            </main>
+            <footer class="footer">
+                <p class="footer-text">Unit Converter 2025</p>
+            </footer>
+        </div>
+    </body>
 </html>
