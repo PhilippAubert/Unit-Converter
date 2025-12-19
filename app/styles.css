@@ -5,8 +5,8 @@ p {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 
 input,
 select,
@@ -16,7 +16,7 @@ button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
     appearance: textfield;
 }
 
@@ -62,7 +62,6 @@ header {
     justify-content: space-between;
 }
 
-
 .list-container {
     width: 100%;
     display: flex;
@@ -70,7 +69,6 @@ header {
     justify-content: space-between;
     background-color: #0ff;
     padding: 4px 12px;
-
 }
 
 .list-item {
@@ -84,11 +82,21 @@ header {
     color: #000;
 }
 
-
 .main {
     flex: 1;
     font-size: 32px;
-    padding: 32px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-container {
+    padding: 16px;
+    gap: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-container {
@@ -112,7 +120,6 @@ header {
     gap: 4px;
 }
 
-
 .form-label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
@@ -134,12 +141,11 @@ input {
 }
 
 input:focus {
-    outline: none
+    outline: none;
 }
 
 .input-area {
     width: 100%;
-
 }
 
 select {
@@ -165,14 +171,10 @@ option {
     box-sizing: border-box;
 }
 
-
-
 .select-wrapper::after {
     right: 0;
     position: absolute;
 }
-
-
 
 button {
     box-sizing: border-box;
@@ -184,7 +186,6 @@ button {
     border-radius: 5px;
     font-weight: 800;
     background-color: #f0f;
-    width: 50%;
     padding: 16px;
 }
 
@@ -214,9 +215,11 @@ footer {
     padding: 24px;
 }
 
+/*DESKTOP */
+
 @media (min-width: 997px) {
     .headline {
-        font-size: 6em;
+        font-size: 4em;
     }
 
     main {
@@ -230,51 +233,75 @@ footer {
         justify-content: flex-start;
     }
 
+    option {
+        font-size: 25px;
+    }
+
     .form {
-        padding: 32px 64px;
+        padding: 12px 64px;
         width: fit-content;
     }
 
     .form-label {
-        font-size: 1.2em;
+        font-size: 12px;
+    }
+
+    .form-section {
+        gap: 0;
     }
 
     .footer-text {
-        font-size: 3em;
+        font-size: 1em;
         display: flex;
         justify-content: center;
     }
+
+    button {
+        box-sizing: border-box;
+        appearance: none;
+        font-size: 20px;
+        display: block;
+        padding: 6px 16px;
+    }
 }
+
+/*MOBLE*/
 
 @media (max-width: 359px) {
     .headline {
-        font-size: 2.8em;
+        font-size: 1.8em;
     }
 
     .list-container {
         font-size: 0.7em;
     }
 
-
     .main {
         flex: 1;
         font-size: 32px;
-        padding: 8px 24px;
-        flex-direction: column;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 4px;
+        font-weight: 400;
+    }
+
+    select {
+        font-size: 18px;
+        padding: 4px;
     }
 
     .form {
         display: flex;
-        flex: 1;
-        justify-content: space-evenly;
-        align-items: center;
+        height: 100%;
+        gap: 50px;
     }
 
     .form-label {
         font-weight: 800;
+        font-size: 16px;
     }
-
-
 
     .footer {
         padding: 0;
@@ -283,5 +310,8 @@ footer {
     button {
         padding: 4px 22px;
         background-color: #f0f;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
