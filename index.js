@@ -43,7 +43,7 @@ app.post("/", (req, res) => {
     }
 
     res.send(`
-        <h1>Converted value: ${result}</h1>
+        <h1>Converted value  ${value} ${from}:  ${result} ${to}</h1>
         <a href="/">Back</a>
     `);
 });
