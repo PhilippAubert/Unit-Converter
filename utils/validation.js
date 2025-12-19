@@ -1,4 +1,4 @@
-export const validateConversionRequest = (body) => {
+export const validateRequest = (body) => {
     if (!body || typeof body !== "object") {
         return { valid: false, error: "Invalid request body" };
     }
