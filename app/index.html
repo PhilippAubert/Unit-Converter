@@ -6,14 +6,6 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Unit Converter</title>
 </head>
-
-
-<!-- 
-    TODO: 
-    RESPONSIVENESS 
-    DANN: JAVASCRIPT! +
-    CHANGE METHOD TO POST!
- -->
 <body>
     <div class="global-app">
         <header class="header">
@@ -39,7 +31,7 @@
             </nav>
         </header>
         <main class="main">
-            <form class="form" id="converterForm" method="get">
+            <form class="form" id="converterForm" method="post" action="/">
                 <div class="form-section">
                     <label class="form-label" for="length">Enter length:</label>
                     <div class="input-area">
@@ -80,7 +72,7 @@
                 <div class="form-section">
                     <label class="form-label" for="length_to">Unit to convert to:</label>
                     <div class="select-wrapper">
-                        <select>
+                        <select id="length_to" name="to" required>    
                         <option value="">
                             <span>--Please choose an option--</span>
                         </option>
