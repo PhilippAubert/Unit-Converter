@@ -29,8 +29,6 @@ h1 {
 }
 
 .global-app {
-    /*     background-color: #0ff;
- */
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
@@ -43,24 +41,15 @@ header {
     padding: 24px;
 }
 
-.header {
-    /*     background-color: #f0f;
- */
-}
-
 .headline {
     display: flex;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4.5em;
-    /*     background-color: #0ff;
- */
     padding: 4px 12px;
 }
 
 .navigation {
-    /*     background-color: #f0f;
- */
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -71,8 +60,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*     background-color: #0ff;
- */
     padding: 4px 12px;
 }
 
@@ -137,8 +124,6 @@ input {
     padding: 0;
     margin: 0;
     border-style: solid;
-    /*     background-color: #f0f;
- */
     color: #000;
     font-weight: 800;
     border-radius: 5px;
@@ -160,13 +145,6 @@ select {
     border-radius: 5px;
     font-size: 100%;
     width: 100%;
-    /*     background-color: #f0f;
- */
-}
-
-option {
-    /*     background: #f0f;
- */
 }
 
 .select-wrapper {
@@ -191,7 +169,6 @@ button {
     display: block;
     border-radius: 5px;
     font-weight: 800;
-    background-color: #f0f;
     padding: 16px;
 }
 
@@ -205,20 +182,11 @@ button {
 footer {
     margin: 0;
     display: block;
-    /*     background-color: #f0f;
- */
     color: #0ff;
-}
-
-.footer {
-    /*     background-color: #0ff;
- */
 }
 
 .footer-text {
     font-family: Arial, Helvetica, sans-serif;
-    /*     background-color: #000;
- */
     color: #f0f;
     font-weight: 800;
     padding: 24px;
@@ -318,8 +286,6 @@ footer {
 
     button {
         padding: 4px 22px;
-        /*         background-color: #f0f;
- */
         width: 100%;
         font-size: 18px;
         font-weight: 400;

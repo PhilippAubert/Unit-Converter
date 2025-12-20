@@ -8,7 +8,11 @@ import {
     convertTemperature
 } from "./utils/converter.js";
 
-import { pluralizeUnits, normalizeResult } from "./utils/normalizers.js";
+import {
+    pluralizeUnits,
+    normalizeResult,
+    roundToSigFigs
+} from "./utils/normalizers.js";
 
 import { validateRequest } from "./utils/validation.js";
 
@@ -26,7 +30,7 @@ app.post("/", (req, res) => {
         return res.status(400).send(validatedInput.error);
     }
 
-    const { value, type, from, to } = validatedInput;
+    const { value, type, from, to, sigFigs } = validatedInput;
 
     let result;
 
@@ -43,6 +47,8 @@ app.post("/", (req, res) => {
         default:
             return res.status(400).send("Unknown conversion type");
     }
+
+    result = roundToSigFigs(result, sigFigs + 1);
 
     res.send(`
 		<!DOCTYPE html>
@@ -85,7 +91,7 @@ app.post("/", (req, res) => {
 				</footer>
 			</div>
 		</body>
-		</html>
+		</html>	
 	`);
 });
 
