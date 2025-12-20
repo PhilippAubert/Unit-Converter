@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Unit Converter</title>
+    </head>
+    <body>
+        <div class="global-app">
+            <header class="header">
+                <h1 class="headline">Unit Converter</h1>
+                <nav class="navigation">
+                    <ul class="list-container">
+                        <li class="list-item">
+                            <a href="/index.html">
+                                <p class="list-item-text">Length</p>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/weight.html">
+                                <p class="list-item-text">Weight</p>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/temperature.html">
+                                <p class="list-item-text">Temperature</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <form class="form" id="converterForm" method="post" action="/">
+                    <div class="form-section">
+                        <label class="form-label" for="weight"
+                            >Enter weight</label
+                        >
+                        <div class="input-area">
+                            <input
+                                type="text"
+                                id="weight"
+                                name="weight"
+                                inputmode="decimal"
+                                pattern="^-?\d+([.,]\d+)?$"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <label class="form-label" for="weight_from"
+                            >Unit to convert from</label
+                        >
+                        <div class="select-wrapper">
+                            <select id="weight_from" name="from" required>
+                                <option value="">
+                                    <span>--Please choose an option--</span>
+                                </option>
+                                <option value="milligram">
+                                    <span>Milligram</span>
+                                </option>
+                                <option value="gram">
+                                    <span>Gram</span>
+                                </option>
+                                <option value="kilogram">
+                                    <span>Kilogram</span>
+                                </option>
+                                <option value="ounce">
+                                    <span>Ounce</span>
+                                </option>
+                                <option value="pound">
+                                    <span>Pound</span>
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <label class="form-label" for="weight_to"
+                            >Unit to convert to</label
+                        >
+                        <div class="select-wrapper">
+                            <select id="weight_from" name="to" required>
+                                <option value="">
+                                    <span>--Please choose an option--</span>
+                                </option>
+                                <option value="milligram">
+                                    <span>Milligram</span>
+                                </option>
+                                <option value="gram">
+                                    <span>Gram</span>
+                                </option>
+                                <option value="kilogram">
+                                    <span>Kilogram</span>
+                                </option>
+                                <option value="ounce">
+                                    <span>Ounce</span>
+                                </option>
+                                <option value="pound">
+                                    <span>Pound</span>
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button-area">
+                        <button type="submit">Convert</button>
+                    </div>
+                </form>
+            </main>
+            <footer class="footer">
+                <p class="footer-text">Unit Converter 2025</p>
+            </footer>
+        </div>
+    </body>
+</html>
