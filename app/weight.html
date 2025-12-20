@@ -34,20 +34,22 @@
                 <form class="form" id="converterForm" method="post" action="/">
                     <div class="form-section">
                         <label class="form-label" for="weight"
-                            >Enter weight:</label
+                            >Enter weight</label
                         >
                         <div class="input-area">
                             <input
-                                type="number"
+                                type="text"
                                 id="weight"
                                 name="weight"
+                                inputmode="decimal"
+                                pattern="^-?\d+([.,]\d+)?$"
                                 required
                             />
                         </div>
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="weight_from"
-                            >Unit to convert from:</label
+                            >Unit to convert from</label
                         >
                         <div class="select-wrapper">
                             <select id="weight_from" name="from" required>
@@ -74,7 +76,7 @@
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="weight_to"
-                            >Unit to convert to:</label
+                            >Unit to convert to</label
                         >
                         <div class="select-wrapper">
                             <select id="weight_from" name="to" required>

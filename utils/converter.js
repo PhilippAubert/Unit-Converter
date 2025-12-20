@@ -52,7 +52,7 @@ export const convertLength = (length, from, to) => {
     const normalizeToCentimeters = {
         millimeter: (l) => l * 0.1,
         centimeter: (l) => l,
-        meter: (l) => l * l * 100,
+        meter: (l) => l * 100,
         kilometer: (l) => l * 100000,
         inch: (l) => l * 2.54,
         foot: (l) => l * 30.48,

@@ -34,20 +34,22 @@
                 <form class="form" id="converterForm" method="post" action="/">
                     <div class="form-section">
                         <label class="form-label" for="length"
-                            >Enter length:</label
+                            >Enter length</label
                         >
                         <div class="input-area">
                             <input
-                                type="number"
+                                type="text"
                                 id="length"
                                 name="length"
+                                inputmode="decimal"
+                                pattern="^-?\d+([.,]\d+)?$"
                                 required
                             />
                         </div>
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="length_from"
-                            >Unit to convert from:</label
+                            >Unit to convert from</label
                         >
                         <div class="select-wrapper">
                             <select id="length_from" name="from" required>
@@ -59,6 +61,9 @@
                                 </option>
                                 <option value="centimeter">
                                     <span>Centimeter</span>
+                                </option>
+                                <option value="meter">
+                                    <span>Meter</span>
                                 </option>
                                 <option value="kilometer">
                                     <span>Kilometer</span>
@@ -80,7 +85,7 @@
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="length_to"
-                            >Unit to convert to:</label
+                            >Unit to convert to</label
                         >
                         <div class="select-wrapper">
                             <select id="length_to" name="to" required>
@@ -92,6 +97,9 @@
                                 </option>
                                 <option value="centimeter">
                                     <span>Centimeter</span>
+                                </option>
+                                <option value="meter">
+                                    <span>Meter</span>
                                 </option>
                                 <option value="kilometer">
                                     <span>Kilometer</span>

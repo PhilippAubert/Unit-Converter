@@ -1,25 +1,39 @@
 export const pluralizeUnits = ({ unit, value }) => {
+    if (unit === "kelvin" || unit === "celsius" || unit === "fahrenheit") {
+        return unit;
+    }
+
     if (value === 1) return unit;
-    if (unit === "foot") return value === 1 ? "foot" : "feet";
-    if (unit === "inch") return value === 1 ? "inch" : "inches";
+    if (unit === "foot") return "feet";
+    if (unit === "inch") return "inches";
 
     return unit + "s";
 };
 
-export const normalizeResult = (value) => {
-    const absNum = Math.abs(value);
+export const roundToSigFigs = (value, sigFigs) => {
+    if (value === 0) return 0;
+    return Number(value.toPrecision(sigFigs));
+};
 
-    if (absNum === 0) return "0";
+export const normalizeResult = (value, maxDecimals = 12) => {
+    if (!Number.isFinite(value)) return value.toString();
 
-    if (absNum < 0.001) {
-        return Number(value).toExponential(3);
-    } else if (absNum < 1) {
-        return Number(value).toPrecision(4);
-    } else if (absNum < 1000) {
-        return parseFloat(value.toFixed(3));
-    } else if (absNum < 1000000) {
-        return parseFloat(value.toFixed(2));
-    } else {
-        return Number(value).toExponential(4);
+    const rounded = Number(value.toFixed(maxDecimals));
+    let str = rounded.toString();
+
+    if (str.includes("e")) {
+        const [base, exp] = str.split("e");
+        const exponent = Number(exp);
+        let [int, frac = ""] = base.split(".");
+        let digits = int + frac;
+
+        if (exponent < 0) {
+            const zeros = Math.abs(exponent) - int.length;
+            str = `0.${"0".repeat(zeros)}${digits}`;
+        } else {
+            str = digits + "0".repeat(exponent - frac.length);
+        }
     }
+
+    return str.replace(/\.?0+$/, "");
 };

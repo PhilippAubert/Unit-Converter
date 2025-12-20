@@ -34,20 +34,22 @@
                 <form class="form" id="converterForm" method="post" action="/">
                     <div class="form-section">
                         <label class="form-label" for="temperature"
-                            >Enter temperature:</label
+                            >Enter temperature</label
                         >
                         <div class="input-area">
                             <input
-                                type="number"
+                                type="text"
                                 id="temperature"
                                 name="temperature"
+                                inputmode="decimal"
+                                pattern="^-?\d+([.,]\d+)?$"
                                 required
                             />
                         </div>
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="temperature_from"
-                            >Unit to convert from:</label
+                            >Unit to convert from</label
                         >
                         <div class="select-wrapper">
                             <select id="temperature_to" name="from" required>
@@ -68,7 +70,7 @@
                     </div>
                     <div class="form-section">
                         <label class="form-label" for="temperature_to"
-                            >Unit to convert to:</label
+                            >Unit to convert to</label
                         >
                         <div class="select-wrapper">
                             <select id="temperature_to" name="to" required>
